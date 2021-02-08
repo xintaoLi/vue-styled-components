@@ -1,6 +1,8 @@
 # Extend vue-styled-components
 
-Update: theme to styledTheme, Avoid extend custom component with theme prop conflict
+Update: changed `theme` to `styledTheme`, avoid extend custom component with theme prop conflict
+
+feature: Add custom class name support with clsName config, config in options, such as: `styled('div', {}, { clsName : 'section-div-header' })`, stylesheet will create class with name `section-div-header` instead of random class name
 
 # vue-styled-components
 
