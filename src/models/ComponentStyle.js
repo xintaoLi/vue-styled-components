@@ -8,8 +8,9 @@ export default (nameGenerator) => {
   const inserted = {}
 
   class ComponentStyle {
-    constructor (rules) {
+    constructor (rules, clsName) {
       this.rules = rules
+      this.clsName = clsName
       stylis.set({ keyframe: false })
       if (!styleSheet.injected) styleSheet.inject()
       this.insertedRule = styleSheet.insert('')
@@ -26,7 +27,7 @@ export default (nameGenerator) => {
         .replace(/^\s*\/\/.*$/gm, '') // replace JS comments
       const hash = hashStr(flatCSS)
       if (!inserted[hash]) {
-        const selector = nameGenerator(hash)
+        const selector = this.clsName ? this.clsName : nameGenerator(hash)
         inserted[hash] = selector
         const css = stylis(`.${selector}`, flatCSS)
         this.insertedRule.appendRule(css)

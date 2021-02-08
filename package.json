@@ -1,14 +1,11 @@
 {
-  "name": "vue-styled-components",
-  "version": "1.6.0",
+  "name": "@tencent/vue-styled-components",
+  "version": "1.6.6",
   "description": "Visual primitives for the component age. A simple port of styled-components 💅 for Vue",
   "main": "lib/index.js",
   "module": "dist/vue-styled-components.es.js",
   "author": "Lorenzo Girardi",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/styled-components/vue-styled-components/issues"
-  },
   "scripts": {
     "build": "npm run build:lib && npm run build:dist",
     "prebuild:lib": "rm -rf lib/*",
@@ -23,10 +20,6 @@
     "prepublish": "npm run build",
     "lint-staged": "lint-staged",
     "dev": "node example/devServer.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/styled-components/vue-styled-components.git"
   },
   "keywords": [
     "vue",

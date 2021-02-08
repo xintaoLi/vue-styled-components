@@ -15,7 +15,7 @@ describe('basic', () => {
   })
 
   it('should not throw an error when called', () => {
-    styled.div``
+    styled('div', {}, { clsName: 'cls-test-01' })``
   })
 
   it('should inject a stylesheet when a component is created', () => {

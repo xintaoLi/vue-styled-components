@@ -8,9 +8,8 @@ import _styledComponent from './models/StyledComponent'
 import _componentStyle from './models/ComponentStyle'
 import _styled from './constructors/styled'
 
-const styled = _styled(
-  _styledComponent(_componentStyle(generateAlphabeticName))
-)
+const styled = _styled(_styledComponent(_componentStyle(generateAlphabeticName)))
+// styled.prototype = _styled.prototype
 
 export default styled
 

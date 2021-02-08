@@ -1,11 +1,11 @@
 export default {
   name: 'ThemeProvider',
   props: {
-    theme: Object
+    styledTheme: Object
   },
   provide () {
     return {
-      $theme: () => this.theme
+      $theme: () => this.styledTheme
     }
   },
   render: function (createElement) {

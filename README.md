@@ -1,3 +1,7 @@
+# Extend vue-styled-components
+
+Update: theme to styledTheme, Avoid extend custom component with theme prop conflict
+
 # vue-styled-components
 
 > Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅

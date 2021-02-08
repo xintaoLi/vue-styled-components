@@ -5,9 +5,10 @@ import isVueComponent from '../utils/isVueComponent'
 export default (ComponentStyle) => {
   const createStyledComponent = (target, rules, props, options) => {
     const {
-      attrs = []
+      attrs = [],
+      clsName = undefined
     } = options
-    const componentStyle = new ComponentStyle(rules)
+    const componentStyle = new ComponentStyle(rules, clsName)
 
     // handle array-declaration props
     const currentProps = normalizeProps(props)
@@ -76,12 +77,12 @@ export default (ComponentStyle) => {
           const componentProps = { ...context, ...attrs }
           return this.generateAndInjectStyles(componentProps)
         },
-        theme () {
+        localTheme () {
           return this.$theme()
         },
         context () {
           return {
-            theme: this.theme,
+            styledTheme: this.localTheme,
             ...this.$props
           }
         },

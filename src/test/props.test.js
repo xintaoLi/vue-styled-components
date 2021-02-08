@@ -39,7 +39,7 @@ describe('props', () => {
     }
 
     const Comp = styled.div`
-      color: ${props => props.theme.blue};
+      color: ${props => props.styledTheme.blue};
     `
     const Themed = {
       render: function(createElement) {
@@ -47,7 +47,7 @@ describe('props', () => {
           ThemeProvider,
           {
             props: {
-              theme,
+              styledTheme: theme,
             },
           },
           [
