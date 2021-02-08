@@ -4,6 +4,8 @@ Update: changed `theme` to `styledTheme`, avoid extend custom component with the
 
 feature: Add custom class name support with clsName config, config in options, such as: `styled('div', {}, { clsName : 'section-div-header' })`, stylesheet will create class with name `section-div-header` instead of random class name
 
+Note: this version has not publish to npm, you need to build local package to use
+
 # vue-styled-components
 
 > Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅
